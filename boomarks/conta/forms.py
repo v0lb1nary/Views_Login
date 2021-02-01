@@ -1,6 +1,10 @@
 from django import forms
+from django.forms import ModelForm
+from .models import Cliente    
 
-class FormularioLogin(forms.Form):
-    nome_usuario = forms.CharField()
-    senha = forms.CharField(widget=forms.PasswordInput)
+
+class ClienteForm(ModelForm):
     
+    class Meta:
+        model = Cliente
+        fields = '__all__'

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %} Autentificação do usuário {% endblock %}
+
+{% block content %}
+    <h1>Autentificação</h1>
+    <p>Coloca seu login no formulário</p>
+
+    <form method="post">
+        {{ formulario.as_p }}
+        {% csrf_token %}
+
+        <p> <input type="submit" value="entrar"></p>
+    </form>
+    
+{% endblock %}

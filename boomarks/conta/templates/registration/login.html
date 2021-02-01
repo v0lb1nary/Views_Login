@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Autentificação {% endblock title %}
+
+
+{% block content %}
+    <h1>Entrar</h1>
+    
+    {% if form.errors %}
+        <strong><p>Seu usuario e senha esta incorreto. <br>Por favor, tente novamente</p></strong>
+    
+    {% else %}
+        <p>Por favor, use o seguinte formulario a baixo:</p>
+
+    {% endif %}
+        
+    <div class="login-form">
+        <form action="{% url 'login' %}" method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}">
+            <p><input type="submit" value="Entra"></p>
+
+        </form>
+    </div>
+
+{% endblock content %}
+    
+
+
+    

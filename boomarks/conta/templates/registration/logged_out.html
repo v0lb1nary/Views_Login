@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Sair
+{% endblock title %}
+    
+
+{% block content %}
+    <h1>Sair</h1>
+    <p>Você foi desconectado com sucesso
+        <br>
+        Entra novamente <a href="{% url 'login' %}"><i>Relogin</i></a>
+    </p>
+{% endblock content %}
+    

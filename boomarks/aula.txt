@@ -1,0 +1,37 @@
+FRAMEWORK DE AUTENTIFICAÇÃO
+
+- Autentificação de usuario
+- Sessões
+- Permissões
+- Grupos de usuários
+
+*Ele esta em: django.contrib.auth
+
+Inclui MODELOS:
+
+- User: contém os campos básicos
+- Group: classifica os usuários
+- Permission: flags para permitir alguma ação
+
+=========================================================
+
+Usando as views do Django
+
+- Django possui formuylarios e views prontas para serem usadas em autentificações, todas as views vão estar em: django.contrib.auth.views
+
+VIEW PARA LIDAR COM AUTENTIFICAÇÃO 
+
+- loginViews: lida com formulario de login
+- LogoutView: faz logaut do usuário
+
+VIEWS PARA LIDAR COM ALTERAÇÕES DE SENHA
+
+- PasswordChargeView: lida com os formularios de alteração de senha
+- PasswordChargeDoneViews: a view de sucesso para o qual o usuario seá redirecionado quando alterado com sucesso
+
+VIEWS QUE PARMINTEM USUARIO FAÇAM RESET AS SENHAS	
+
+- PasswordRestView: permite que o user reiniciem suas senhas, gere um token que sera enviado por email
+- PasswordResetDoneView: informa para o usuario que um email foi enviado
+- PasswordResetCofimView: permite que o usuario defina uma nova senha
+- PasswordRestCompleteView: a view de sucesso, para qual o usuario sera redirecionado apos reiniciar uma nova senha
